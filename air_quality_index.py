@@ -34,56 +34,56 @@ def main():
 
     # getting the air quality index and the location
     # of the user.
-    userIndex = input(
+    user_index = input(
         "Please input the air quality index for your region "
         "and you will get the hat man’s special certified air warning :) "
     )
-    userLocation = input(
+    user_location = input(
         "Please input the name of your location. The hat man desires it :) "
     )
 
-    # initializing variable of userIndexAsInt to prevent
+    # initializing variable of user_index_as_int to prevent
     # the runtime error that occurs with an unassigned variable.
     # later on with the exception.
-    userIndexAsInt = userIndex
+    user_index_as_int = user_index
 
     # using a try...catch statement to check to see if the user inputted
     # a valid integer.
     try:
-        userIndexAsInt = int(userIndex)
+        user_index_as_int = int(user_index)
         # checks to see if the user's integer is between
         # 0 to 500.
-        if userIndexAsInt >= 0 and userIndexAsInt <= 500:
+        if user_index_as_int >= 0 and user_index_as_int <= 500:
             # uses an if...else if... else statement to see
             # which warning the user air quality index
             # falls under.
-            if userIndexAsInt >= 0 and userIndexAsInt <= 50:
+            if user_index_as_int >= 0 and user_index_as_int <= 50:
                 print(
                     "The air quality index for the location '{}', "
                     "with the value you entered, ({}), is “Good”. "
                     "This means it is safe for you to go outside - "
                     "air pollution poses "
-                    "little/no risk.".format(userLocation, userIndexAsInt)
+                    "little/no risk.".format(user_location, user_index_as_int)
                 )
-            elif userIndexAsInt >= 51 and userIndexAsInt <= 100:
+            elif user_index_as_int >= 51 and user_index_as_int <= 100:
                 print(
                     "The air quality index for the location '{}', "
                     "with the value you entered, ({}), "
                     "is “Moderate”. This means it is still acceptable to go outside, "
                     "however there is a moderate risk for a small population of people "
                     "who are unusually sensitive "
-                    "to air pollution.".format(userLocation, userIndexAsInt)
+                    "to air pollution.".format(user_location, user_index_as_int)
                 )
-            elif userIndexAsInt >= 101 and userIndexAsInt <= 150:
+            elif user_index_as_int >= 101 and user_index_as_int <= 150:
                 print(
                     "The air quality index for the location '{}', "
                     "with the value you entered, ({}), "
                     "is “Unhealthy For Sensitive Groups”. This means that those in sensitive groups "
                     "may have moderate health effects. "
                     "The general population "
-                    "is typically not affected.".format(userLocation, userIndexAsInt)
+                    "is typically not affected.".format(user_location, user_index_as_int)
                 )
-            elif userIndexAsInt >= 151 and userIndexAsInt <= 200:
+            elif user_index_as_int >= 151 and user_index_as_int <= 200:
                 print(
                     "The air quality index for the location '{}', "
                     "with the value you entered, ({}), "
@@ -91,42 +91,42 @@ def main():
                     "of the population will start experiencing "
                     "mild/moderate health effects, and those in sensitive"
                     "groups may experience severe effects. It is not "
-                    "advisable to go outside.".format(userLocation, userIndexAsInt)
+                    "advisable to go outside.".format(user_location, user_index_as_int)
                 )
-            elif userIndexAsInt >= 201 and userIndexAsInt <= 300:
+            elif user_index_as_int >= 201 and user_index_as_int <= 300:
                 print(
                     "The air quality index for the location '{}', "
                     "with the value you entered, ({}), "
                     "is “Very Unhealthy”. This means that all members of "
                     "the population will experience moderate/severe health "
                     "effects - it is not advisable "
-                    "to go outside.".format(userLocation, userIndexAsInt)
+                    "to go outside.".format(user_location, user_index_as_int)
                 )
-            elif userIndexAsInt >= 301 and userIndexAsInt <= 500:
+            elif user_index_as_int >= 301 and user_index_as_int <= 500:
                 print(
                     "The air quality index for the location '{}', "
                     "with the value you entered, ({}), "
                     "is “Hazardous”. This means that the entire population "
                     "is almost surely to be affected - this level is "
                     "considered an emergency health warning. It is "
-                    "not safe to go outside.".format(userLocation, userIndexAsInt)
+                    "not safe to go outside.".format(user_location, user_index_as_int)
                 )
             else:
                 print(
                     "I'm sorry, the value you entered, ({}), "
                     "is not valid. Please only enter an integer "
-                    "from 0-500".format(userIndexAsInt)
+                    "from 0-500".format(user_index_as_int)
                 )
         else:
             print(
                 "I'm sorry, the value you entered, ({}), "
                 "is not valid. Please only enter an integer "
-                "from 0-500".format(userIndexAsInt)
+                "from 0-500".format(user_index_as_int)
             )
     except Exception and ValueError:
         print(
             "I'm sorry, the value you entered, ({}), is not valid. "
-            "Please only input an integer from 0-500.".format(userIndexAsInt)
+            "Please only input an integer from 0-500.".format(user_index_as_int)
         )
     finally:
         print(
