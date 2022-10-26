@@ -42,6 +42,11 @@ def main():
         "Please input the name of your location. The hat man desires it :) "
     )
 
+    # initializing variable of userIndexAsInt to prevent
+    # the runtime error that occurs with an unassigned variable.
+    # later on with the exception.
+    userIndexAsInt = userIndex
+
     # using a try...catch statement to check to see if the user inputted
     # a valid integer.
     try:
@@ -118,7 +123,7 @@ def main():
                 "is not valid. Please only enter an integer "
                 "from 0-500".format(userIndexAsInt)
             )
-    except Exception:
+    except Exception and ValueError:
         print(
             "I'm sorry, the value you entered, ({}), is not valid. "
             "Please only input an integer from 0-500.".format(userIndexAsInt)
