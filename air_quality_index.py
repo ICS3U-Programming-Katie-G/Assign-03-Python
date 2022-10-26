@@ -81,7 +81,8 @@ def main():
                     "is “Unhealthy For Sensitive Groups”. This means that those in sensitive groups "
                     "may have moderate health effects. "
                     "The general population "
-                    "is typically not affected.".format(user_location, user_index_as_int)
+                    "is typically not "
+                    "affected.".format(user_location, user_index_as_int)
                 )
             elif user_index_as_int >= 151 and user_index_as_int <= 200:
                 print(
