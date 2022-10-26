@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Created by: Katie G
-# Created on: October 3rd, 2022
+# Created on: October 24th, 2022
 # This program gets the location and air
 # quality index from the user, then checks
 # to make sure it is a valid input using a
